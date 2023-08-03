@@ -11,5 +11,6 @@
 - [x] 6 Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
 - [x] 7 Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello
 - [x] 8 Write a script that sets specific permissions for the file hello: no permission for the owner and group, all permissions for other users.
-- [x] 9 Setting the mode of the file hello to -rwxr-x-wx.
-- [x] 10 Setting the mode of the file 'hello' to match the mode of another file named 'olleh'.  
+- [x] 9 Write a script to set the mode of the file hello to -rwxr-x-wx.
+- [x] 10 Write a script to set the mode of the file 'hello' to match the mode of another file named 'olleh'.
+- [x] 11 Write a script to add execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
