@@ -315,8 +315,7 @@ thisisatextfile:       ASCII text
 ubuntu@ip-172-31-63-244:/tmp/magic$
 
 ```
-
-Compile magic file `school` to a binary file `school.mgc` was done by `-C` option
+**Note: Generate `.mgc` file by compile magic file `school` to a binary file `school.mgc` using `-C` option**
 
 ```bash
 file -C -m school
