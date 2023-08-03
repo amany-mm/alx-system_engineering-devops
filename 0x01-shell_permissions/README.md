@@ -15,6 +15,7 @@
 - [x] 10 Write a script to set the mode of the file `hello` to match the mode of another file named `olleh`.
 - [x] 11 Write a script to add execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
 - [x] 12 Write a script that creates a directory called `my_dir` with permissions `751` in the working directory.
-- [] 13 Write a script that changes the group owner to `school` for the file `hello`
+- [x] 13 Write a script that changes the group owner to `school` for the file `hello`
+- [x] 14 Write a script that changes the owner to `vincent` and the group owner to `staff` for all the files and directories in the working directory.
 
 
