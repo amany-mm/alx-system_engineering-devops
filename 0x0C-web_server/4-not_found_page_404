@@ -1,32 +1,11 @@
 #!/usr/bin/env bash
 # A script that installs nginx and creates a 404 error page
 
-CONFIG_FILE="/etc/nginx/sites-available/default"
-# install nginx
-apt-get -y update
-apt-get -y install nginx
 
-# update index.html file
-echo "Hello World!" > /usr/share/nginx/html/index.html
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+sudo apt-get update
+sudo apt-get install -y nginx
+sudo service nginx start
 
-# update config file to redirect
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root   /usr/share/nginx/html;
-    index  index.html index.htm;
-
-    location /redirect_me {
-        return 301 http://google.com/;
-    }
-
-    error_page 404 /404.html;
-    location /404 {
-      root /usr/share/nginx/html;
-      internal;
-    }
-}" > $CONFIG_FILE
-
-# start nginx after reloading config
-service nginx start
+sudo sed -i "s/#error_page 404/error_page 404/" /etc/nginx/sites-enabled/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
+sudo service nginx restart
