@@ -25,4 +25,21 @@ INSERT INTO nexus6 (name) VALUES ('Leon');
 ```
 GRANT SELECT ON tyrell_corp.nexus6 TO 'holberton_user'@'localhost';
 ```
+
+## Check if it is created successfully
+```
+$ mysql -uholberton_user -p -e "use tyrell_corp; select * from nexus6"
+Enter password:
++----+-------+
+| id | name  |
++----+-------+
+|  1 | Leon  |
++----+-------+
+```
+
 ## Exit the MySQL server.
+```
+$ exit
+```
+
+

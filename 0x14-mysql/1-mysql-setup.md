@@ -23,3 +23,14 @@ File: [1-transfer_file](./1-transfer_file)
 ```
 cat 1-setup_mysql_dev.sql | sudo mysql
 ```
+
+## Check if all good
+```
+mysql -uholberton_user -p -e "SHOW GRANTS FOR 'holberton_user'@'localhost'"
+Enter password:
++-----------------------------------------------------------------+
+| Grants for holberton_user@localhost                             |
++-----------------------------------------------------------------+
+| GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost' |
++-----------------------------------------------------------------+
+```
