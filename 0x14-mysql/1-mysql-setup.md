@@ -1,7 +1,7 @@
 # [How to] Set up MySQL User
 ## create the setup file
 ```
-$ cat setup_mysql_dev.sql 
+$ cat 1-setup_mysql_dev.sql 
 -- script to create MySQL user on web servers
 
 -- create user if not exist
@@ -16,10 +16,10 @@ FLUSH PRIVILEGES;
 File: [1-transfer_file](./1-transfer_file)
 ## transfer the setup file to the server
 ```
-./1-transfer_file setup_mysql_dev.sql 52.207.208.230 ubuntu ~/.ssh/school
+./1-transfer_file 1-setup_mysql_dev.sql 52.207.208.230 ubuntu ~/.ssh/school
 ```
 
 ## Execute the setup file on the individual servers as such:
 ```
-cat setup_mysql_dev.sql | sudo mysql
+cat 1-setup_mysql_dev.sql | sudo mysql
 ```
